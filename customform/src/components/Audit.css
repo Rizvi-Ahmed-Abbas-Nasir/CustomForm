@@ -1,0 +1,224 @@
+/* Main form container */
+.audit-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #ff1493, #00bfff); /* Pink on top, Blue on bottom */
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Form container styles */
+  .form-container {
+    background-color: white;
+    padding: 100px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px; /* Increased vertical height */
+  }
+  
+  /* Heading styles */
+  .form-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 70px; /* Increased margin bottom for more space */
+  }
+  
+  /* Progress Bar Container */
+  .progress-bar-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px; /* Increased space below progress bar */
+    position: relative; /* Allows absolute positioning of circles */
+  }
+  
+  /* Progress bar background */
+  .progress-bar {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    width: 100%; /* Full width of container */
+  }
+  
+  /* Container for the circle steps on top of the progress bar */
+  .progress-steps {
+    display: flex;
+    justify-content: space-between; /* Spaces out the circles evenly */
+    position: absolute;
+    top: -15px; /* Moves circles above the bar */
+    width: 100%; /* Matches the full width of the progress bar */
+  }
+  
+  /* Container for each individual step (circle) */
+  .progress-step-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Circle step styles */
+  .progress-step {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; /* Makes circles round */
+    background-color: white;
+    border: 2px solid #ff1493; /* Pink border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff1493; /* Pink color */
+    font-weight: bold;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition when step is filled */
+  }
+  
+  /* Styles for filled steps */
+  .progress-step.filled {
+    background-color: #ff1493; /* Pink color when filled */
+    color: white; /* White text on filled circle */
+  }
+  
+  /* Subheading (step number label) below each circle */
+  .progress-step-subheading {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  /* Question and Button Container */
+  .question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 35px; /* Increased space below question */
+  }
+  
+  /* Styling for the question number */
+  .question-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Styling for the actual question text */
+  .question-text {
+    font-size: 1.5rem; /* Increased size of question text */
+    font-weight: bold; /* Bold question text */
+    color: #444;
+    margin-top: 10px;
+  }
+  
+  /* Button container with styling */
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 35px; /* Increased space between buttons */
+  }
+  
+  /* Generic button styling */
+  .button {
+    font-size: 1.1rem;
+    border: 2px solid #333;
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: 120px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Yes button hover effect */
+  .yes-button:hover {
+    background-color: #000000;
+    color:white; /* Sky Blue on hover */
+  }
+  
+  /* No button hover effect */
+  .no-button:hover {
+    background-color: #000000;
+    color:white; /* Sky Blue on hover */
+  }
+  
+  /* Yes button selected state */
+  .yes-button.selected {
+    background-color: #28a745; /* Green if YES selected */
+    color: white;
+  }
+  
+  /* No button selected state */
+  .no-button.selected {
+    background-color: #dc3545; /* Red if NO selected */
+    color: white;
+  }
+  
+  /* General form buttons container */
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* Increased top margin for more spacing */
+  }
+  
+  /* Styling for the elliptical buttons */
+  .btn {
+    padding: 10px 20px;
+    border-radius: 50px; /* Elliptical buttons */
+    font-size: 0.8rem;
+    font-weight:bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  /* Back button styling */
+  .btn-back {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
+  /* Submit button styling */
+  .btn-submit {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  /* Next button styling */
+  .btn-next {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Disabled button styling */
+  .btn-disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Hover effect for buttons */
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Back button hover effect */
+  .btn-back:hover {
+    background-color: #d9d9d9;
+  }
+  
+  /* Submit button hover effect */
+  .btn-submit:hover {
+    background-color: #218838;
+  }
+  
+  /* Next button hover effect */
+  .btn-next:hover {
+    background-color: #0069d9;
+  }
+  
