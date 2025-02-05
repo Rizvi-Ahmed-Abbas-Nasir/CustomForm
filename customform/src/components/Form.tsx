@@ -9,7 +9,6 @@ import './Audit.css';
 const Container = styled.div`
   color: black;
   padding: 7rem 3rem;
-  background-color: white;
   border-radius: 15px;
   margin: auto;
   display: flex;
