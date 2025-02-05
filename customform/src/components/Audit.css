@@ -1,224 +1,232 @@
-/* Main form container */
 .audit-form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #ff1493, #00bfff); /* Pink on top, Blue on bottom */
-    flex-direction: column;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #000000, #00bfff);
+  flex-direction: column;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: white;
+  padding: 100px;
+  border-radius: 15px;
+  display:flex;
+  justify-content:center;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.form-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 70px;
+}
+
+.progress-bar-container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+
+
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: -15px;
+  width: 100%;
+}
+
+.progress-step-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-step {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-weight: bold;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.progress-step.filled {
+  background-color: #000000;
+  color: white;
+}
+
+.progress-step-subheading {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+.question-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.question-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #444;
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 35px;
+}
+
+.button {
+  font-size: 1.1rem;
+  border: 2px solid #333;
+  border-radius: 25px;
+  padding: 10px 20px;
+  width: 120px;
+  transition: all 0.3s ease;
+}
+
+.yes-button:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.no-button:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.yes-button.selected {
+  background-color: #28a745;
+  color: white;
+}
+
+.no-button.selected {
+  background-color: #dc3545;
+  color: white;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-back {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.btn-submit {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-next {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-back:hover {
+  background-color: #d9d9d9;
+}
+
+.btn-submit:hover {
+  background-color: #218838;
+}
+
+.btn-next:hover {
+  background-color: #0069d9;
+}
+
+
+.form-wrapper {
+  position: relative;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-out {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  /* Form container styles */
-  .form-container {
-    background-color: white;
-    padding: 100px;
-    border-radius: 15px;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 400px; /* Increased vertical height */
+  100% {
+    transform: rotate(360deg);
   }
-  
-  /* Heading styles */
-  .form-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 70px; /* Increased margin bottom for more space */
-  }
-  
-  /* Progress Bar Container */
-  .progress-bar-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 40px; /* Increased space below progress bar */
-    position: relative; /* Allows absolute positioning of circles */
-  }
-  
-  /* Progress bar background */
-  .progress-bar {
-    height: 10px;
-    background-color: #ddd;
-    border-radius: 5px;
-    width: 100%; /* Full width of container */
-  }
-  
-  /* Container for the circle steps on top of the progress bar */
-  .progress-steps {
-    display: flex;
-    justify-content: space-between; /* Spaces out the circles evenly */
-    position: absolute;
-    top: -15px; /* Moves circles above the bar */
-    width: 100%; /* Matches the full width of the progress bar */
-  }
-  
-  /* Container for each individual step (circle) */
-  .progress-step-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Circle step styles */
-  .progress-step {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%; /* Makes circles round */
-    background-color: white;
-    border: 2px solid #ff1493; /* Pink border */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ff1493; /* Pink color */
-    font-weight: bold;
-    position: relative;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition when step is filled */
-  }
-  
-  /* Styles for filled steps */
-  .progress-step.filled {
-    background-color: #ff1493; /* Pink color when filled */
-    color: white; /* White text on filled circle */
-  }
-  
-  /* Subheading (step number label) below each circle */
-  .progress-step-subheading {
-    font-size: 0.9rem;
-    color: #333;
-    font-weight: bold;
-    margin-top: 5px;
-  }
-  
-  /* Question and Button Container */
-  .question-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 35px; /* Increased space below question */
-  }
-  
-  /* Styling for the question number */
-  .question-number {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* Styling for the actual question text */
-  .question-text {
-    font-size: 1.5rem; /* Increased size of question text */
-    font-weight: bold; /* Bold question text */
-    color: #444;
-    margin-top: 10px;
-  }
-  
-  /* Button container with styling */
-  .button-container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 35px; /* Increased space between buttons */
-  }
-  
-  /* Generic button styling */
-  .button {
-    font-size: 1.1rem;
-    border: 2px solid #333;
-    border-radius: 25px;
-    padding: 10px 20px;
-    width: 120px;
-    transition: all 0.3s ease;
-  }
-  
-  /* Yes button hover effect */
-  .yes-button:hover {
-    background-color: #000000;
-    color:white; /* Sky Blue on hover */
-  }
-  
-  /* No button hover effect */
-  .no-button:hover {
-    background-color: #000000;
-    color:white; /* Sky Blue on hover */
-  }
-  
-  /* Yes button selected state */
-  .yes-button.selected {
-    background-color: #28a745; /* Green if YES selected */
-    color: white;
-  }
-  
-  /* No button selected state */
-  .no-button.selected {
-    background-color: #dc3545; /* Red if NO selected */
-    color: white;
-  }
-  
-  /* General form buttons container */
-  .form-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px; /* Increased top margin for more spacing */
-  }
-  
-  /* Styling for the elliptical buttons */
-  .btn {
-    padding: 10px 20px;
-    border-radius: 50px; /* Elliptical buttons */
-    font-size: 0.8rem;
-    font-weight:bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  /* Back button styling */
-  .btn-back {
-    background-color: #f1f1f1;
-    color: #333;
-  }
-  
-  /* Submit button styling */
-  .btn-submit {
-    background-color: #28a745;
-    color: white;
-  }
-  
-  /* Next button styling */
-  .btn-next {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  /* Disabled button styling */
-  .btn-disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  /* Hover effect for buttons */
-  .btn:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Back button hover effect */
-  .btn-back:hover {
-    background-color: #d9d9d9;
-  }
-  
-  /* Submit button hover effect */
-  .btn-submit:hover {
-    background-color: #218838;
-  }
-  
-  /* Next button hover effect */
-  .btn-next:hover {
-    background-color: #0069d9;
-  }
-  
+}
